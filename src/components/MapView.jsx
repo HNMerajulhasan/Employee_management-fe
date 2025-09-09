@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { MapContainer, TileLayer, GeoJSON, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, GeoJSON, Marker } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import geoData from "../data/geoBoundaries-BGD-ADM1_simplified.json";
@@ -112,6 +112,8 @@ export default function EmployeeMap() {
   };
 
   return (
+    <div>
+      <h2 className="font-bold p-4 text-xl">Employees Accordingly District On Map</h2>
     <div className="relative">
       <MapContainer
         center={[23.685, 90.356]}
@@ -136,6 +138,7 @@ export default function EmployeeMap() {
         ))}
       </MapContainer>
       <Legend />
+    </div>
     </div>
   );
 }
